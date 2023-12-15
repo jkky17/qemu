@@ -17,10 +17,10 @@ rm -rf ngrok.tgz
 ./ngrok tcp 5900
 ```
 ```
-sudo apt update && sudo apt install qemu-kvm
+sudo apt update && sudo apt install qemu-kvm -y
 ```
 ```
-qemu-img create -f raw win11.img 64G
+qemu-img create -f raw 1.img 64G
 ```
 ```
 qemu-system-x86_64 -m 8G -cpu host -boot order=c -drive file=1.iso,media=cdrom -drive file=1.img,format=raw -device usb-ehci,id=usb,bus=pci.0,addr=0x4 -device usb-tablet -vnc :0 -smp cores=2 -device rtl8139,netdev=n0 -netdev user,id=n0 -vga qxl -enable-kvm
