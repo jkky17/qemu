@@ -31,3 +31,4 @@ rm -rf 1.iso
 ```
 sudo qemu-system-x86_64 -m 8G -cpu host -boot order=c -drive file=1.img,format=raw -device usb-ehci,id=usb,bus=pci.0,addr=0x4 -device usb-tablet -vnc :0 -smp cores=2 -device rtl8139,netdev=n0 -netdev user,id=n0 -vga qxl -enable-kvm
 ```
+https://learn.microsoft.com/en-us/training/modules/implement-common-integration-features-finance-ops/10-exercise-1
